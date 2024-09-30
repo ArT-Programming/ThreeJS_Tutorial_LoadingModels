@@ -220,7 +220,7 @@ class LoadModelDemo {
   _LoadAnimatedModel() {
     const loader = new FBXLoader();
     loader.setPath('./resources/zombie/');
-    loader.load('mremireh_o_desbiens.fbx', (fbx) => {
+    loader.load('CatwalkHugo.fbx', (fbx) => {
       fbx.scale.setScalar(0.1);
       fbx.traverse(c => {
         c.castShadow = true;
@@ -234,7 +234,7 @@ class LoadModelDemo {
 
       const anim = new FBXLoader();
       anim.setPath('./resources/zombie/');
-      anim.load('walk.fbx', (anim) => {
+      anim.load('CatwalkHugo.fbx', (anim) => {
         const m = new THREE.AnimationMixer(fbx);
         this._mixers.push(m);
         const idle = m.clipAction(anim.animations[0]);
