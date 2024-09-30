@@ -221,7 +221,7 @@ class LoadModelDemo {
     const loader = new FBXLoader();
     loader.setPath('./resources/zombie/');
     loader.load('CatwalkHugo.fbx', (fbx) => {
-      fbx.scale.setScalar(0.1);
+      fbx.scale.setScalar(1);
       fbx.traverse(c => {
         c.castShadow = true;
       });
@@ -234,7 +234,7 @@ class LoadModelDemo {
 
       const anim = new FBXLoader();
       anim.setPath('./resources/zombie/');
-      anim.load('CatwalkHugo.fbx', (anim) => {
+      anim.load('Catwalk.fbx', (anim) => {
         const m = new THREE.AnimationMixer(fbx);
         this._mixers.push(m);
         const idle = m.clipAction(anim.animations[0]);
