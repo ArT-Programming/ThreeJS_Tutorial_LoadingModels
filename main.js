@@ -149,12 +149,12 @@ class LoadModelDemo {
       this._OnWindowResize();
     }, false);
 
-    const fov = 40;
+    const fov = 35;
     const aspect = 1920 / 1080;
     const near = 1.0;
     const far = 1000.0;
     this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    this._camera.position.set(75, 20, 0);
+    this._camera.position.set(0, 20, 200);
 
     this._scene = new THREE.Scene();
 
